@@ -13,6 +13,7 @@
 
   home.packages = [
     pkgs.pinentry-curses
+    pkgs.appimage-run
     pkgs.zoxide
     pkgs.fuzzel
     pkgs.swaybg

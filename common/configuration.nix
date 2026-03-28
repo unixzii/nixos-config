@@ -22,6 +22,7 @@
 
   # Only install a few important packages globally.
   environment.systemPackages = [
+    pkgs.file
     pkgs.vim
     pkgs.git
     pkgs.fastfetch
@@ -52,7 +53,10 @@
   };
 
   fonts.packages = [
+    pkgs.noto-fonts
+    pkgs.noto-fonts-cjk-sans
     pkgs.nerd-fonts.noto
+    pkgs._0xproto
   ];
 
   # xdg.portal = {
