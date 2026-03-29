@@ -6,6 +6,7 @@
     (import ./modules/starship.nix)
     (import ./modules/git.nix)
     (import ./modules/kitty.nix)
+    (import ./modules/cursor.nix)
   ];
 
   home.username = "cyan";
