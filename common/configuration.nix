@@ -45,6 +45,8 @@
       enable = true;
       wayland.enable = true;
     };
+    # To make "Trash" work in GNOME Files.
+    gvfs.enable = true;
   };
 
   programs = {

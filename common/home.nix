@@ -6,6 +6,7 @@
     (import ./modules/starship.nix)
     (import ./modules/git.nix)
     (import ./modules/kitty.nix)
+    (import ./modules/fuzzel.nix)
     (import ./modules/cursor.nix)
   ];
 
@@ -16,11 +17,12 @@
     pkgs.pinentry-curses
     pkgs.appimage-run
     pkgs.zoxide
-    pkgs.fuzzel
     pkgs.swaybg
+    pkgs.nautilus
     pkgs.google-chrome
     pkgs._1password-cli
     pkgs._1password-gui
+    pkgs.obs-studio
   ];
 
   programs = {
@@ -36,8 +38,25 @@
     };
   };
 
+  i18n.inputMethod = {
+    enable = true;
+    type = "fcitx5";
+    fcitx5.waylandFrontend = true;
+    fcitx5.addons = [
+      pkgs.fcitx5-rime
+    ];
+  };
+
   # If we need the DE, then we need this.
   xdg.enable = true;
+
+  gtk = {
+    enable = true;
+    iconTheme = {
+      package = pkgs.adwaita-icon-theme;
+      name = "Adwaita";
+    };
+  };
 
   home.stateVersion = "25.11";
 }
