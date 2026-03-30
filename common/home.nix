@@ -17,6 +17,8 @@
     pkgs.pinentry-curses
     pkgs.appimage-run
     pkgs.zoxide
+    pkgs.quickshell
+    pkgs.qml-niri
     pkgs.swaybg
     pkgs.nautilus
     pkgs.google-chrome

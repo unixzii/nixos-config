@@ -11,8 +11,12 @@ let
 in lib.nixosSystem {
   inherit system;
   modules = hostModules ++ [
+    ../overlays.nix
     ../common/configuration.nix
     inputs.home-manager.nixosModules.home-manager
     hmConfigModule
   ];
+  specialArgs = {
+    inherit inputs;
+  };
 }
