@@ -11,12 +11,12 @@
   time.timeZone = "Asia/Shanghai";
   i18n.defaultLocale = "en_US.UTF-8";
 
+  users.defaultUserShell = pkgs.zsh;
   users.users = {
     root.initialPassword = "root";
     cyan = {
       isNormalUser = true;
       extraGroups = [ "wheel" ];
-      shell = pkgs.zsh;
     };
   };
 
