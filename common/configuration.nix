@@ -52,6 +52,14 @@
   programs = {
     zsh.enable = true;
     niri.enable = true;
+    nix-ld = {
+      enable = true;
+      libraries = with pkgs; [
+        stdenv.cc.cc
+        zlib
+        openssl
+      ];
+    };
   };
 
   fonts.packages = [

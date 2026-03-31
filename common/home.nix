@@ -17,6 +17,8 @@
     pkgs.pinentry-curses
     pkgs.appimage-run
     pkgs.zoxide
+    pkgs.nil
+    pkgs.nixd
     pkgs.quickshell
     pkgs.qml-niri
     pkgs.swaybg
