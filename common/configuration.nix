@@ -16,7 +16,10 @@
     root.initialPassword = "root";
     cyan = {
       isNormalUser = true;
-      extraGroups = [ "wheel" ];
+      extraGroups = [
+        "wheel"
+        "docker"
+      ];
     };
   };
 
@@ -75,6 +78,10 @@
   #   config.common.default = "*";
   #   extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   # };
+
+  virtualisation.docker = {
+    enable = true;
+  };
 
   system.stateVersion = "25.11";
 }
